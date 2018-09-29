@@ -1,3 +1,9 @@
+//
+//  configure.swift
+//  smock
+//
+//  Created by Andrew Scott on 9/26/18.
+//
 import FluentSQLite
 import Vapor
 
@@ -27,7 +33,7 @@ public func configure(_ config: inout Config, _ env: inout Environment, _ servic
 
     /// Configure migrations
     var migrations = MigrationConfig()
-    migrations.add(model: Todo.self, database: .sqlite)
+    migrations.add(model: MockResponse.self, database: .sqlite)
     services.register(migrations)
 
 }
